@@ -1,8 +1,9 @@
 // Colors
+@import "colors.less";
 
-@text-color: #aaa;
-@text-color-subtle: #555;
-@text-color-highlight: #fff;
+@text-color: @mono-1;
+@text-color-subtle: @mono-2;
+@text-color-highlight: @white;
 @text-color-selected: @text-color-highlight;
 
 @text-color-info: #5293d8;
@@ -23,7 +24,7 @@
 @background-color-highlight: rgba(255, 255, 255, 0.07);
 @background-color-selected: #4182C4;
 
-@app-background-color: #333;
+@app-background-color: @syntax-bg;
 
 @base-background-color: lighten(@tool-panel-background-color, 5%);
 @base-border-color: rgba(0, 0, 0, 0.5);
@@ -31,37 +32,38 @@
 @pane-item-background-color: @base-background-color;
 @pane-item-border-color: rgba(0, 0, 0, 0.5);
 
-@input-background-color: #212224;
+@input-background-color: lighten(@syntax-bg, 12%);
 @input-border-color: @base-border-color;
 
-@tool-panel-background-color: #1d1f21;
+@tool-panel-background-color: @app-background-color;
 @tool-panel-border-color: @base-border-color;
 
-@inset-panel-background-color: #161719;
+@inset-panel-background-color: @syntax-bg;
 @inset-panel-border-color: @base-border-color;
 
-@panel-heading-background-color: #43484d;
+@panel-heading-background-color: @app-background-color;
 @panel-heading-border-color: fadein(@base-border-color, 10%);
 
 @overlay-background-color: #202123;
 @overlay-border-color: @background-color-highlight;
 
-@button-background-color: #43484d;
-@button-background-color-hover: lighten(@button-background-color, 5%);
-@button-background-color-selected: #5c6064;
+@button-background-color: lighten(@syntax-bg, 12%);
+@button-background-color-hover: lighten(@button-background-color, 10%);
+@button-background-color-selected: @button-background-color-hover;
 @button-border-color: @base-border-color;
 
-@tab-bar-background-color: #222;
-@tab-bar-border-color: darken(@tab-background-color-active, 10%);
-@tab-background-color: #333;
-@tab-background-color-active: #222;
-@tab-border-color: #484848;
+@tab-bar-background-color: @app-background-color;
+@tab-bar-border-color: lighten(@tab-background-color-active, 10%);
+@tab-background-color: lighten(@syntax-bg, 5%);
+@tab-background-color-active: lighten(@syntax-bg, 10%);
+@tab-border-color: @tab-background-color-active;
 
-@tree-view-background-color: #303030;
+@tree-view-background-color: @app-background-color;
 @tree-view-border-color: @tool-panel-border-color;
+@tree-view-selected: lighten(@syntax-bg, 10%);
 
-@scrollbar-background-color: #222425; // Needs to be opaque -> atom/atom/issues/4578
-@scrollbar-color: rgba(92, 92, 92, 0.5);
+@scrollbar-background-color: @app-background-color; // Needs to be opaque -> atom/atom/issues/4578
+@scrollbar-color: lighten(@syntax-bg, 10%);
 
 @ui-site-color-1: @background-color-success; // green
 @ui-site-color-2: @background-color-info; // blue
