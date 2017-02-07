@@ -37,3 +37,19 @@ atom-panel.modal, .overlay {
     }
   }
 }
+.overlay.modal {
+  width: 100%;
+  height: 100%;
+  left: 0;
+  margin-left: 0;
+  background-color: fade(lighten(@overlay-background-color, 15%), 60%);
+  .select-list.fuzzy-finder,
+  .go-to-line,
+  .tree-view-dialog {
+    width: 35%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    background-color: @overlay-background-color;
+  }
+}
